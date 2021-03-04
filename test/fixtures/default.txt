@@ -1,0 +1,71 @@
+leading metadata block 
+.
+---
+a: 1
+b:
+- 1
+- 2
+---
+content
+.
+<p>content</p>
+.
+
+
+metadata block interrupting list
+.
+- a
+
+---
+a: 1
+b:
+- 1
+- 2
+...
+- b
+.
+<ul>
+<li>a</li>
+</ul>
+<ul>
+<li>b</li>
+</ul>
+.
+
+invalid: metadata block without leading blank line
+.
+before
+---
+a: 1
+...
+after
+.
+<h2>before</h2>
+<p>a: 1
+...
+after</p>
+.
+
+invalid: metadata block containing non-object yaml value
+.
+---
+true
+...
+.
+<hr>
+<p>true
+...</p>
+.
+
+invalid: metadata block containing syntax errors
+.
+---
+key: value
+keyWithoutValue
+...
+.
+<hr>
+<p>key: value
+keyWithoutValue
+...</p>
+.
