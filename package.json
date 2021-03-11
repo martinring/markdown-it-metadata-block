@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-metadata-block",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "pandoc compatible metadata blocks for markdown-it",
   "type": "module",
   "main": "cjs/index.js",
